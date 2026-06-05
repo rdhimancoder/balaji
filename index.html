@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balaji Computer Training Centre | NIELIT Affiliated | Chandigarh</title>
+  <meta name="description" content="Govt. Registered & NIELIT Affiliated Computer Education Centre in Chandigarh. DCA, ADCA, CCC, Typing, NIOS Tuition. 4.9★ Rated by 570+ students." />
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <!-- FontAwesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Google Fonts: Poppins -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" />
+
+  <style>
+    /* ==============================
+       CSS CUSTOM PROPERTIES
+    ============================== */
+    :root {
+      --primary-dark: #0f2027;
+      --primary-mid: #203a43;
+      --primary-light: #2c5364;
+      --accent-gold: #f39c12;
+      --accent-orange: #e67e22;
+      --white: #ffffff;
+      --ice-blue: #f4f7f6;
+      --ice-blue-2: #eaf1f8;
+      --text-dark: #1a2332;
+      --text-muted: #6c7a8d;
+      --glass-bg: rgba(255,255,255,0.08);
+      --glass-border: rgba(255,255,255,0.18);
+      --card-shadow: 0 8px 32px rgba(15,32,39,0.12);
+      --gold-glow: 0 0 20px rgba(243,156,18,0.35);
+      --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ==============================
+       RESET & BASE
+    ============================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--ice-blue);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* ==============================
+       SCROLLBAR
+    ============================== */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: var(--primary-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 10px; }
+
+    /* ==============================
+       NAVIGATION
+    ============================== */
+    #mainNav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9999;
+      padding: 0.75rem 0;
+      transition: var(--transition);
+      background: transparent;
+    }
+
+    #mainNav.scrolled {
+      background: rgba(15,32,39,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+      padding: 0.45rem 0;
+    }
+
+    .navbar-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .brand-icon-wrap {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--gold-glow);
+      flex-shrink: 0;
+    }
+
+    .brand-icon-wrap i { color: #fff; font-size: 1.2rem; }
+
+    .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-text .name {
+      font-weight: 700; font-size: 0.95rem;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .brand-text .tagline {
+      font-size: 0.62rem; color: var(--accent-gold);
+      font-weight: 400; letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-link-custom {
+      color: rgba(255,255,255,0.85) !important;
+      font-size: 0.83rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.4rem 0.85rem !important;
+      border-radius: 6px;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .nav-link-custom:hover {
+      color: var(--accent-gold) !important;
+      background: rgba(243,156,18,0.08);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      color: #fff !important;
+      padding: 0.42rem 1.15rem !important;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: var(--gold-glow);
+      transition: var(--transition);
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(243,156,18,0.5); }
+
+    .navbar-toggler {
+      border: 1.5px solid rgba(255,255,255,0.3);
+      padding: 0.3rem 0.6rem;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* ==============================
+       HERO SECTION
+    ============================== */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 45%, #2c5364 100%);
+    }
+
+    #three-canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(243,156,18,0.06) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, rgba(44,83,100,0.4) 0%, transparent 50%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding-top: 5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(243,156,18,0.15);
+      border: 1px solid rgba(243,156,18,0.4);
+      border-radius: 50px;
+      padding: 0.35rem 1rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      animation: pulse-dot 1.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.88rem, 2vw, 1.05rem);
+      color: rgba(255,255,255,0.75);
+      font-weight: 300;
+      max-width: 540px;
+      margin-bottom: 1.8rem;
+      line-height: 1.75;
+    }
+
+    .rating-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 50px;
+      padding: 0.55rem 1.2rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+    }
+    .stars { color: var(--accent-gold); font-size: 0.9rem; letter-spacing: 0.05em; }
+    .rating-text { color: #fff; font-size: 0.82rem; font-weight: 600; }
+    .rating-sub { color: rgba(255,255,255,0.55); font-size: 0.75rem; }
+
+    .hero-cta-wrap { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-gold-solid {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      color: #fff;
+      border: none;
+      padding: 0.82rem 1.8rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: var(--transition);
+      box-shadow: 0 6px 25px rgba(243,156,18,0.4);
+      cursor: pointer;
+    }
+    .btn-gold-solid:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(243,156,18,0.55);
+      color: #fff;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.45);
+      padding: 0.82rem 1.8rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: var(--transition);
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.7);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    .hero-visual-side {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-glass-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      max-width: 340px;
+      width: 100%;
+      animation: float-card 4s ease-in-out infinite;
+    }
+
+    @keyframes float-card {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .glass-card-stat {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      margin-bottom: 0.85rem;
+      transition: var(--transition);
+    }
+    .glass-card-stat:last-child { margin-bottom: 0; }
+    .glass-card-stat:hover { background: rgba(243,156,18,0.1); border-color: rgba(243,156,18,0.3); }
+
+    .stat-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(243,156,18,0.25), rgba(230,126,34,0.25));
+      border: 1px solid rgba(243,156,18,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .stat-icon i { color: var(--accent-gold); font-size: 1.1rem; }
+
+    .stat-info .val {
+      font-size: 1.3rem; font-weight: 800;
+      color: #fff; line-height: 1;
+    }
+    .stat-info .lbl {
+      font-size: 0.72rem; color: rgba(255,255,255,0.6);
+      font-weight: 400; margin-top: 2px;
+    }
+
+    /* ==============================
+       SECTION COMMON
+    ============================== */
+    .section-pad { padding: 90px 0; }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title span {
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-divider {
+      width: 56px; height: 4px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-orange));
+      border-radius: 4px;
+      margin: 1.1rem 0 1.4rem;
+    }
+
+    .section-lead {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    /* Dark section */
+    .section-dark {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+    }
+    .section-dark .section-title { color: #fff; }
+    .section-dark .section-lead { color: rgba(255,255,255,0.65); }
+
+    /* ==============================
+       PILLAR CARDS
+    ============================== */
+    #pillars { background: var(--white); }
+
+    .pillar-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      border: 1.5px solid rgba(15,32,39,0.07);
+      transition: var(--transition);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-gold), var(--accent-orange));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(15,32,39,0.14);
+      border-color: rgba(243,156,18,0.2);
+    }
+    .pillar-card:hover::before { transform: scaleX(1); }
+
+    .pillar-icon-wrap {
+      width: 64px; height: 64px;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.4rem;
+      position: relative;
+    }
+
+    .pillar-icon-wrap.blue {
+      background: linear-gradient(135deg, #e8f4fd, #cce4f7);
+    }
+    .pillar-icon-wrap.gold {
+      background: linear-gradient(135deg, #fef9e7, #fdedc6);
+    }
+    .pillar-icon-wrap.green {
+      background: linear-gradient(135deg, #e8f8f5, #c8f0e8);
+    }
+    .pillar-icon-wrap.purple {
+      background: linear-gradient(135deg, #f3eafd, #e0cefc);
+    }
+
+    .pillar-icon-wrap i { font-size: 1.65rem; }
+    .pillar-icon-wrap.blue i { color: #2980b9; }
+    .pillar-icon-wrap.gold i { color: var(--accent-gold); }
+    .pillar-icon-wrap.green i { color: #27ae60; }
+    .pillar-icon-wrap.purple i { color: #8e44ad; }
+
+    .pillar-card h4 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ==============================
+       COURSES / TAB FILTER
+    ============================== */
+    #courses { background: var(--ice-blue); }
+
+    .filter-tabs {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.52rem 1.25rem;
+      border-radius: 50px;
+      border: 1.5px solid rgba(15,32,39,0.15);
+      background: #fff;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.03em;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 6px 20px rgba(243,156,18,0.35);
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1.5px solid rgba(15,32,39,0.07);
+      transition: var(--transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(15,32,39,0.12);
+      border-color: rgba(243,156,18,0.25);
+    }
+
+    .course-card-header {
+      padding: 1.8rem 1.8rem 1.2rem;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .course-card-header::after {
+      content: '';
+      position: absolute;
+      right: -20px; bottom: -20px;
+      width: 90px; height: 90px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+
+    .course-cat-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 50px;
+      margin-bottom: 0.9rem;
+    }
+
+    .cat-certified { background: rgba(243,156,18,0.2); color: var(--accent-gold); border: 1px solid rgba(243,156,18,0.35); }
+    .cat-nios { background: rgba(41,128,185,0.2); color: #5dade2; border: 1px solid rgba(93,173,226,0.35); }
+
+    .course-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .course-icon i { color: #fff; font-size: 1.35rem; }
+
+    .course-card-header h5 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .course-card-body {
+      padding: 1.4rem 1.8rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-desc {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .course-meta {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+    }
+
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--ice-blue);
+      padding: 0.28rem 0.7rem;
+      border-radius: 50px;
+    }
+    .meta-chip i { font-size: 0.65rem; color: var(--accent-gold); }
+
+    .certified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #27ae60;
+      background: rgba(39,174,96,0.08);
+      border: 1px solid rgba(39,174,96,0.25);
+      padding: 0.28rem 0.75rem;
+      border-radius: 50px;
+      margin-bottom: 1.1rem;
+    }
+
+    .btn-batch {
+      width: 100%;
+      padding: 0.72rem;
+      border-radius: 12px;
+      border: 1.5px solid rgba(243,156,18,0.4);
+      background: transparent;
+      color: var(--accent-gold);
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.03em;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    }
+    .btn-batch:hover {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 6px 20px rgba(243,156,18,0.35);
+    }
+
+    /* ==============================
+       TESTIMONIALS
+    ============================== */
+    #testimonials {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-mid) 60%, #2c5364 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #testimonials::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(243,156,18,0.06) 0%, transparent 70%);
+    }
+
+    .testi-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 2rem 1.8rem;
+      height: 100%;
+      transition: var(--transition);
+      position: relative;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .testi-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(243,156,18,0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .testi-quote-icon {
+      font-size: 2.5rem;
+      color: var(--accent-gold);
+      opacity: 0.4;
+      line-height: 1;
+      margin-bottom: 0.8rem;
+    }
+
+    .testi-text {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .testi-footer { display: flex; align-items: center; gap: 0.85rem; }
+
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: #fff; font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .testi-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .testi-stars { color: var(--accent-gold); font-size: 0.75rem; letter-spacing: 0.04em; }
+
+    /* ==============================
+       CONTACT / LOCATION
+    ============================== */
+    #contact { background: var(--white); }
+
+    .contact-info-card {
+      background: var(--ice-blue);
+      border-radius: 20px;
+      padding: 2rem;
+      height: 100%;
+      border: 1.5px solid rgba(15,32,39,0.07);
+      transition: var(--transition);
+    }
+    .contact-info-card:hover {
+      box-shadow: var(--card-shadow);
+      border-color: rgba(243,156,18,0.2);
+    }
+
+    .contact-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 6px 20px rgba(243,156,18,0.3);
+    }
+    .contact-icon i { color: #fff; font-size: 1.2rem; }
+
+    .contact-info-card h6 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info-card p, .contact-info-card a {
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      margin: 0;
+      text-decoration: none;
+      line-height: 1.7;
+    }
+    .contact-info-card a:hover { color: var(--accent-gold); }
+
+    .map-embed-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1.5px solid rgba(15,32,39,0.1);
+      box-shadow: var(--card-shadow);
+      height: 320px;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: #fff;
+    }
+
+    .map-placeholder i { font-size: 3rem; color: var(--accent-gold); }
+    .map-placeholder p { font-size: 0.88rem; color: rgba(255,255,255,0.7); text-align: center; margin: 0; }
+
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: var(--transition);
+      box-shadow: var(--gold-glow);
+    }
+    .map-btn:hover { transform: translateY(-2px); color: #fff; box-shadow: 0 10px 30px rgba(243,156,18,0.5); }
+
+    .lgbtq-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.1rem;
+      border-radius: 50px;
+      background: linear-gradient(90deg, #ff0099, #ff6600, #ffcc00, #33cc33, #0099ff, #6600ff);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* ==============================
+       MODAL
+    ============================== */
+    .modal-content {
+      border-radius: 22px;
+      border: none;
+      overflow: hidden;
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
+      border-bottom: none;
+      padding: 1.8rem 2rem 1.2rem;
+    }
+
+    .modal-title { color: #fff; font-weight: 700; }
+    .btn-close { filter: invert(1); }
+
+    .modal-body { padding: 2rem; }
+
+    .form-control, .form-select {
+      border-radius: 10px;
+      border: 1.5px solid rgba(15,32,39,0.15);
+      padding: 0.72rem 1rem;
+      font-size: 0.87rem;
+      font-family: 'Poppins', sans-serif;
+      transition: var(--transition);
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(243,156,18,0.12);
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    /* ==============================
+       BATCH TIMING MODAL
+    ============================== */
+    .timing-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      background: var(--ice-blue);
+      margin-bottom: 0.6rem;
+      font-size: 0.85rem;
+    }
+
+    .timing-row .shift { font-weight: 600; color: var(--text-dark); }
+    .timing-row .time { color: var(--accent-gold); font-weight: 700; }
+    .timing-row .avail {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+      background: rgba(39,174,96,0.1);
+      color: #27ae60;
+      font-weight: 600;
+    }
+
+    /* ==============================
+       FOOTER
+    ============================== */
+    #footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.65);
+      padding: 60px 0 0;
+    }
+
+    .footer-brand-col .brand-desc {
+      font-size: 0.83rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      margin-top: 1rem;
+      max-width: 270px;
+    }
+
+    .footer-heading {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links { list-style: none; padding: 0; margin: 0; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a {
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.83rem;
+      transition: var(--transition);
+      display: inline-flex; align-items: center; gap: 0.4rem;
+    }
+    .footer-links a::before {
+      content: '›';
+      color: var(--accent-gold);
+      font-size: 1rem;
+    }
+    .footer-links a:hover { color: var(--accent-gold); padding-left: 4px; }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.7rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.83rem;
+    }
+    .footer-contact-item i { color: var(--accent-gold); margin-top: 3px; flex-shrink: 0; }
+    .footer-contact-item a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-contact-item a:hover { color: var(--accent-gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin-top: 3rem;
+      padding: 1.4rem 0;
+    }
+
+    .footer-bottom p { font-size: 0.78rem; margin: 0; color: rgba(255,255,255,0.4); }
+
+    .social-links { display: flex; gap: 0.6rem; margin-top: 1.2rem; }
+    .social-link {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+    }
+    .social-link:hover {
+      background: var(--accent-gold);
+      border-color: var(--accent-gold);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ==============================
+       SCROLL TO TOP
+    ============================== */
+    #scrollTop {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 46px; height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      box-shadow: 0 8px 25px rgba(243,156,18,0.45);
+      z-index: 9998;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+    #scrollTop.visible { opacity: 1; transform: translateY(0); }
+    #scrollTop:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(243,156,18,0.6); }
+
+    /* ==============================
+       FLOATING PHONE BUTTON
+    ============================== */
+    #floatCall {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      background: linear-gradient(135deg, #27ae60, #2ecc71);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.65rem 1.2rem;
+      display: flex; align-items: center; gap: 0.55rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      z-index: 9998;
+      box-shadow: 0 8px 25px rgba(39,174,96,0.45);
+      animation: pulse-call 2.5s ease-in-out infinite;
+      transition: var(--transition);
+    }
+    #floatCall:hover { color: #fff; transform: translateY(-3px); box-shadow: 0 14px 35px rgba(39,174,96,0.55); }
+
+    @keyframes pulse-call {
+      0%, 100% { box-shadow: 0 8px 25px rgba(39,174,96,0.45); }
+      50% { box-shadow: 0 8px 35px rgba(39,174,96,0.7); }
+    }
+
+    /* ==============================
+       HIDDEN COURSE CARDS
+    ============================== */
+    .course-item { display: block; }
+    .course-item.hidden { display: none; }
+
+    /* ==============================
+       ANIMATIONS
+    ============================== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ==============================
+       RESPONSIVE
+    ============================== */
+    @media (max-width: 991px) {
+      .hero-visual-side { margin-top: 3rem; }
+      .hero-glass-card { max-width: 100%; }
+    }
+
+    @media (max-width: 767px) {
+      .section-pad { padding: 65px 0; }
+      .hero-cta-wrap { flex-direction: column; }
+      .btn-gold-solid, .btn-outline-white { justify-content: center; }
+    }
+
+    @media (max-width: 575px) {
+      #floatCall .call-text { display: none; }
+      #floatCall { border-radius: 50%; width: 52px; height: 52px; padding: 0; justify-content: center; left: 1rem; bottom: 1rem; }
+      #scrollTop { bottom: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="mainNav" class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand-wrap" href="#hero">
+      <div class="brand-icon-wrap">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="brand-text">
+        <span class="name">Balaji Computer</span>
+        <span class="tagline">Training Centre · Chandigarh</span>
+      </div>
+    </a>
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mt-3 mt-lg-0">
+        <li class="nav-item"><a href="#pillars" class="nav-link-custom">Why Us</a></li>
+        <li class="nav-item"><a href="#courses" class="nav-link-custom">Courses</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link-custom">Reviews</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link-custom">Contact</a></li>
+        <li class="nav-item ms-lg-2">
+          <a href="#courses" class="nav-link-custom nav-cta">
+            <i class="fa-solid fa-certificate me-1"></i>View Courses
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <canvas id="three-canvas"></canvas>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <div class="row align-items-center g-5 py-5">
+      <div class="col-lg-7 fade-up">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Govt. Registered · NIELIT Affiliated
+        </div>
+
+        <h1 class="hero-title">
+          Your Pathway to<br/>
+          <span class="highlight">Certified Professional</span><br/>
+          Computer Skills
+        </h1>
+
+        <p class="hero-subtitle">
+          Learn in a clean, highly structured classroom environment with incredibly hardworking teachers. Master job-oriented digital modules with deep hands-on practice — from DCA & ADCA to CCC and beyond.
+        </p>
+
+        <div class="rating-strip">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">4.9 Rated</span>
+          <span class="rating-sub">·&nbsp; 570+ Verified Student Reviews</span>
+        </div>
+
+        <div class="hero-cta-wrap">
+          <a href="#courses" class="btn-gold-solid">
+            <i class="fa-solid fa-certificate"></i>
+            Explore Govt. Certified Courses
+          </a>
+          <button class="btn-outline-white" data-bs-toggle="modal" data-bs-target="#niosModal">
+            <i class="fa-solid fa-book-open"></i>
+            Enquire About NIOS Admissions
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-5 hero-visual-side fade-up">
+        <div class="hero-glass-card">
+          <div class="glass-card-stat">
+            <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="stat-info">
+              <div class="val">NIELIT</div>
+              <div class="lbl">Officially Affiliated & Recognized</div>
+            </div>
+          </div>
+          <div class="glass-card-stat">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-info">
+              <div class="val">570+</div>
+              <div class="lbl">Verified 5-Star Student Reviews</div>
+            </div>
+          </div>
+          <div class="glass-card-stat">
+            <div class="stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="stat-info">
+              <div class="val">5+ Courses</div>
+              <div class="lbl">Job-Oriented Certified Programs</div>
+            </div>
+          </div>
+          <div class="glass-card-stat">
+            <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="stat-info">
+              <div class="val">8 AM – 7:30 PM</div>
+              <div class="lbl">Open Daily · Walk-ins Welcome</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PILLARS ==================== -->
+<section id="pillars" class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <p class="section-eyebrow"><i class="fa-solid fa-shield-halved me-1"></i>Core Advantages</p>
+      <h2 class="section-title">Why Students Trust <span>Balaji Centre</span></h2>
+      <div class="section-divider mx-auto"></div>
+      <p class="section-lead mx-auto text-center">Built on years of dedicated teaching, NIELIT affiliation, and an unwavering commitment to student excellence and real-world digital readiness.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 fade-up">
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap blue">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h4>Govt. Regd & NIELIT Affiliated</h4>
+          <p>Earn official certifications universally recognized across public and private employment sectors. Your credentials carry real institutional weight.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-up">
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap gold">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <h4>Hardworking Faculty</h4>
+          <p>Learn directly from highly dedicated, student-first teachers committed to your personal progress. Every query is answered with patience and depth.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-up">
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap green">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <h4>Excellent Learning Environment</h4>
+          <p>Study inside pristine, highly organized, and welcoming modern tech classrooms. A clean, structured space designed to maximize focus and retention.</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 fade-up">
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap purple">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4>570+ Verified Reviews</h4>
+          <p>Backed by a powerful, multi-year legacy of exceptional student satisfaction and success. Our 4.9★ rating speaks louder than any brochure.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COURSES ==================== -->
+<section id="courses" class="section-pad">
+  <div class="container">
+    <div class="row align-items-end mb-4 fade-up">
+      <div class="col-lg-7">
+        <p class="section-eyebrow"><i class="fa-solid fa-layer-group me-1"></i>Skills & Programs</p>
+        <h2 class="section-title">Our <span>Certified Courses</span><br/>& Academic Support</h2>
+        <div class="section-divider"></div>
+        <p class="section-lead">From structured computer diplomas to NIOS academic guidance — every program is crafted to deliver measurable, career-ready outcomes.</p>
+      </div>
+      <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+        <div class="filter-tabs justify-content-lg-end">
+          <button class="filter-btn active" data-filter="all">All Programs</button>
+          <button class="filter-btn" data-filter="certified">Computer Courses</button>
+          <button class="filter-btn" data-filter="nios">NIOS Support</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4" id="courseGrid">
+
+      <!-- DCA -->
+      <div class="col-md-6 col-lg-4 course-item fade-up" data-category="certified">
+        <div class="course-card">
+          <div class="course-card-header">
+            <div class="course-cat-tag cat-certified">Certified Computer Course</div>
+            <div class="course-icon"><i class="fa-solid fa-computer"></i></div>
+            <h5>DCA — Diploma in Computer Applications</h5>
+          </div>
+          <div class="course-card-body">
+            <div class="certified-badge"><i class="fa-solid fa-circle-check"></i>Certified Curriculum</div>
+            <p class="course-desc">Master core office systems, operating system fundamentals, and data architecture. Build a strong foundation in MS Office, basic internet operations, and file management workflows essential for the modern workplace.</p>
+            <div class="course-meta">
+              <span class="meta-chip"><i class="fa-solid fa-clock"></i>6 Months</span>
+              <span class="meta-chip"><i class="fa-solid fa-award"></i>NIELIT Approved</span>
+              <span class="meta-chip"><i class="fa-solid fa-signal"></i>Beginner</span>
+            </div>
+            <button class="btn-batch" onclick="openBatchModal('DCA — Diploma in Computer Applications')">
+              <i class="fa-solid fa-calendar-days"></i>Check Batch Timing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADCA -->
+      <div class="col-md-6 col-lg-4 course-item fade-up" data-category="certified">
+        <div class="course-card">
+          <div class="course-card-header">
+            <div class="course-cat-tag cat-certified">Certified Computer Course</div>
+            <div class="course-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h5>ADCA — Advance Diploma in Computer Applications</h5>
+          </div>
+          <div class="course-card-body">
+            <div class="certified-badge"><i class="fa-solid fa-circle-check"></i>Certified Curriculum</div>
+            <p class="course-desc">Elevate your digital competency with high-tier productivity systems, database scripting fundamentals, and professional design frameworks. Ideal for those ready to enter competitive technical and administrative roles.</p>
+            <div class="course-meta">
+              <span class="meta-chip"><i class="fa-solid fa-clock"></i>12 Months</span>
+              <span class="meta-chip"><i class="fa-solid fa-award"></i>NIELIT Approved</span>
+              <span class="meta-chip"><i class="fa-solid fa-signal"></i>Intermediate</span>
+            </div>
+            <button class="btn-batch" onclick="openBatchModal('ADCA — Advance Diploma in Computer Applications')">
+              <i class="fa-solid fa-calendar-days"></i>Check Batch Timing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CCC -->
+      <div class="col-md-6 col-lg-4 course-item fade-up" data-category="certified">
+        <div class="course-card">
+          <div class="course-card-header">
+            <div class="course-cat-tag cat-certified">Certified Computer Course</div>
+            <div class="course-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h5>CCC & CCC+ — Course on Computer Concepts</h5>
+          </div>
+          <div class="course-card-body">
+            <div class="certified-badge"><i class="fa-solid fa-circle-check"></i>Certified Curriculum</div>
+            <p class="course-desc">Standardized digital literacy curriculum precisely matching NIELIT structural blueprints. CCC certification is a mandatory requirement for numerous government job positions — prepare thoroughly and confidently with us.</p>
+            <div class="course-meta">
+              <span class="meta-chip"><i class="fa-solid fa-clock"></i>3 Months</span>
+              <span class="meta-chip"><i class="fa-solid fa-award"></i>NIELIT Exam</span>
+              <span class="meta-chip"><i class="fa-solid fa-signal"></i>All Levels</span>
+            </div>
+            <button class="btn-batch" onclick="openBatchModal('CCC & CCC Plus — Course on Computer Concepts')">
+              <i class="fa-solid fa-calendar-days"></i>Check Batch Timing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing -->
+      <div class="col-md-6 col-lg-4 course-item fade-up" data-category="certified">
+        <div class="course-card">
+          <div class="course-card-header">
+            <div class="course-cat-tag cat-certified">Certified Computer Course</div>
+            <div class="course-icon"><i class="fa-solid fa-keyboard"></i></div>
+            <h5>Professional Typing Certification</h5>
+          </div>
+          <div class="course-card-body">
+            <div class="certified-badge"><i class="fa-solid fa-circle-check"></i>Certified Curriculum</div>
+            <p class="course-desc">Precision high-speed alphanumeric training pipelines designed for workplace workflows. Build speed, accuracy, and professional-grade keyboarding skills in both English and Hindi that employers actively seek.</p>
+            <div class="course-meta">
+              <span class="meta-chip"><i class="fa-solid fa-clock"></i>2–3 Months</span>
+              <span class="meta-chip"><i class="fa-solid fa-award"></i>Certified</span>
+              <span class="meta-chip"><i class="fa-solid fa-signal"></i>Beginner</span>
+            </div>
+            <button class="btn-batch" onclick="openBatchModal('Professional Typing Certification')">
+              <i class="fa-solid fa-calendar-days"></i>Check Batch Timing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- NIOS -->
+      <div class="col-md-6 col-lg-4 course-item fade-up" data-category="nios">
+        <div class="course-card">
+          <div class="course-card-header" style="background: linear-gradient(135deg, #1a3a5c, #2980b9);">
+            <div class="course-cat-tag cat-nios">NIOS Academic Support</div>
+            <div class="course-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h5>NIOS Tuition & Complete Consultation</h5>
+          </div>
+          <div class="course-card-body">
+            <div class="certified-badge"><i class="fa-solid fa-circle-check"></i>Certified Curriculum</div>
+            <p class="course-desc">Direct counseling pipelines covering formal NIOS admissions, TMA assignment file preparation, practical exam guides, and on-demand fee submissions. Get complete academic hand-holding from enrollment to result.</p>
+            <div class="course-meta">
+              <span class="meta-chip"><i class="fa-solid fa-clock"></i>Session-Based</span>
+              <span class="meta-chip"><i class="fa-solid fa-award"></i>NIOS Board</span>
+              <span class="meta-chip"><i class="fa-solid fa-signal"></i>10th & 12th</span>
+            </div>
+            <button class="btn-batch" onclick="openBatchModal('NIOS Tuition & Complete Consultation')">
+              <i class="fa-solid fa-calendar-days"></i>Check Batch Timing
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tally / Bonus -->
+      <div class="col-md-6 col-lg-4 course-item fade-up" data-category="certified">
+        <div class="course-card">
+          <div class="course-card-header" style="background: linear-gradient(135deg, #1a2a1a, #27ae60 180%);">
+            <div class="course-cat-tag cat-certified">Certified Computer Course</div>
+            <div class="course-icon"><i class="fa-solid fa-chart-bar"></i></div>
+            <h5>MS Office & Basic Computing Fundamentals</h5>
+          </div>
+          <div class="course-card-body">
+            <div class="certified-badge"><i class="fa-solid fa-circle-check"></i>Certified Curriculum</div>
+            <p class="course-desc">A focused crash program covering MS Word, Excel, PowerPoint, email management, internet safety, and cloud basics. Perfect as a standalone skill-builder or as a supplementary track alongside DCA/ADCA programs.</p>
+            <div class="course-meta">
+              <span class="meta-chip"><i class="fa-solid fa-clock"></i>1–2 Months</span>
+              <span class="meta-chip"><i class="fa-solid fa-award"></i>Certificate</span>
+              <span class="meta-chip"><i class="fa-solid fa-signal"></i>Beginner</span>
+            </div>
+            <button class="btn-batch" onclick="openBatchModal('MS Office & Basic Computing Fundamentals')">
+              <i class="fa-solid fa-calendar-days"></i>Check Batch Timing
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /courseGrid -->
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section id="testimonials" class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <p class="section-eyebrow" style="color: var(--accent-gold);"><i class="fa-solid fa-quote-left me-1"></i>Student Voices</p>
+      <h2 class="section-title" style="color: #fff;">What Our Students <span>Experience</span></h2>
+      <div class="section-divider mx-auto"></div>
+      <p class="section-lead mx-auto text-center" style="color:rgba(255,255,255,0.6);">Real words from real learners — reflecting the environment, faculty dedication, and outcomes at Balaji Computer Training Centre.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="testi-card">
+          <div class="testi-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testi-text">"Excellent training centre. Govt regd and nielit affiliated centre. All computer course available here like dca basic typing adca CCC CCC plus etc. NIOS tuition classes also available."</p>
+          <div class="testi-footer">
+            <div class="testi-avatar">S</div>
+            <div>
+              <div class="testi-name">Sureshkumar Kumar</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="testi-card">
+          <div class="testi-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testi-text">"Good class, nice environment, good behavior of teacher and clean classroom. The teachers are very approachable and make learning easy to understand step by step."</p>
+          <div class="testi-footer">
+            <div class="testi-avatar">P</div>
+            <div>
+              <div class="testi-name">Priya Sharma</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="testi-card">
+          <div class="testi-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testi-text">"Great computer centre, very nice atmosphere and location. All is good — from the facilities to the teaching methodology. Highly recommend to anyone looking for quality computer education."</p>
+          <div class="testi-footer">
+            <div class="testi-avatar">R</div>
+            <div>
+              <div class="testi-name">Rahul Verma</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="testi-card">
+          <div class="testi-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="testi-text">"Had a great experience — all teachers are very hardworking and genuinely invested in each student's success. The structured approach to practical learning really makes a difference."</p>
+          <div class="testi-footer">
+            <div class="testi-avatar">A</div>
+            <div>
+              <div class="testi-name">Anjali Patel</div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Rating Summary Bar -->
+    <div class="row justify-content-center mt-5 fade-up">
+      <div class="col-lg-8">
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:2rem 2.5rem;text-align:center;backdrop-filter:blur(10px);">
+          <div style="font-size:3.5rem;font-weight:800;color:#fff;line-height:1;">4.9</div>
+          <div style="color:var(--accent-gold);font-size:1.5rem;margin:0.3rem 0;">★★★★★</div>
+          <div style="color:rgba(255,255,255,0.55);font-size:0.85rem;">Based on <strong style="color:#fff;">570+ verified Google reviews</strong> · Sector 41D, Chandigarh</div>
+          <div style="margin-top:1.2rem;display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div style="color:#fff;font-weight:700;font-size:1.1rem;">100%</div>
+              <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;">Recommend Rate</div>
+            </div>
+            <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
+            <div style="text-align:center;">
+              <div style="color:#fff;font-weight:700;font-size:1.1rem;">NIELIT</div>
+              <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;">Affiliated & Govt. Regd.</div>
+            </div>
+            <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
+            <div style="text-align:center;">
+              <div style="color:#fff;font-weight:700;font-size:1.1rem;">5+ Years</div>
+              <div style="color:rgba(255,255,255,0.5);font-size:0.72rem;">Serving Chandigarh</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <p class="section-eyebrow"><i class="fa-solid fa-location-dot me-1"></i>Find Us</p>
+      <h2 class="section-title">Visit <span>Our Centre</span></h2>
+      <div class="section-divider mx-auto"></div>
+      <p class="section-lead mx-auto text-center">We're open daily and ready to welcome you. Stop by during centre hours for live documentation support, course demos, or NIOS counseling.</p>
+    </div>
+
+    <div class="row g-4 mb-4">
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h6>Our Address</h6>
+          <p>SCO No 39, Top Floor,<br/>Near Nandi Sweet, Sector 41D,<br/>Badheri, Sector 41,<br/>Chandigarh — 160036</p>
+          <p style="margin-top:0.6rem;font-size:0.78rem;color:var(--text-muted);">Plus Code: PPMP+7W Chandigarh</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <h6>Direct Hotline</h6>
+          <p>Call or WhatsApp us directly for instant admissions support, batch enquiries, or NIOS guidance.</p>
+          <a href="tel:07889248540" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.8rem;font-weight:700;color:var(--accent-gold);font-size:1.05rem;">
+            <i class="fa-solid fa-phone-volume"></i>
+            078892 48540
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="contact-info-card">
+          <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+          <h6>Operating Hours</h6>
+          <p>Open Daily</p>
+          <p style="font-size:1.1rem;font-weight:800;color:var(--accent-gold);margin-top:0.3rem;">8:00 AM – 7:30 PM</p>
+          <p style="margin-top:0.5rem;font-size:0.78rem;color:var(--text-muted);">Stop by during centre hours for live documentation support and batch registration assistance.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="contact-info-card">
+          <div class="contact-icon" style="background:linear-gradient(135deg,#ff0099,#6600ff);"><i class="fa-solid fa-heart"></i></div>
+          <h6>Inclusive Space</h6>
+          <p>Balaji Computer Training Centre is a welcoming, inclusive learning environment committed to equal opportunity education for everyone.</p>
+          <div style="margin-top:1rem;">
+            <span class="lgbtq-badge">
+              <i class="fa-solid fa-rainbow"></i>LGBTQ+ Friendly
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map -->
+    <div class="row fade-up">
+      <div class="col-12">
+        <div class="map-embed-wrap">
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p><strong style="color:#fff;">Balaji Computer Training Centre</strong><br/>SCO No 39, Top Floor, Near Nandi Sweet<br/>Sector 41D, Chandigarh — 160036</p>
+            <a href="https://maps.google.com/?q=Balaji+Computer+Training+Centre+Sector+41D+Chandigarh" target="_blank" class="map-btn">
+              <i class="fa-solid fa-map-pin"></i>Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-4 footer-brand-col">
+        <div class="navbar-brand-wrap">
+          <div class="brand-icon-wrap">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="brand-text">
+            <span class="name">Balaji Computer</span>
+            <span class="tagline">Training Centre · Chandigarh</span>
+          </div>
+        </div>
+        <p class="brand-desc">Govt. Registered & NIELIT Affiliated Computer Education Centre empowering students in Chandigarh with certified, job-ready digital skills since our founding.</p>
+        <div class="social-links">
+          <a href="tel:07889248540" class="social-link" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://maps.google.com/?q=Balaji+Computer+Training+Centre+Sector+41D+Chandigarh" target="_blank" class="social-link" title="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+          <a href="#" class="social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-2">
+        <p class="footer-heading">Programs</p>
+        <ul class="footer-links">
+          <li><a href="#courses">DCA Diploma</a></li>
+          <li><a href="#courses">ADCA Advance Diploma</a></li>
+          <li><a href="#courses">CCC & CCC Plus</a></li>
+          <li><a href="#courses">Typing Certification</a></li>
+          <li><a href="#courses">NIOS Tuition</a></li>
+          <li><a href="#courses">MS Office Course</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-6 col-lg-2">
+        <p class="footer-heading">Quick Links</p>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#pillars">Why Balaji</a></li>
+          <li><a href="#testimonials">Student Reviews</a></li>
+          <li><a href="#contact">Location & Hours</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#niosModal">NIOS Enquiry</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <p class="footer-heading">Contact Details</p>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>SCO No 39, Top Floor, Near Nandi Sweet, Sector 41D, Badheri, Chandigarh — 160036</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:07889248540">078892 48540</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Open Daily: 8:00 AM – 7:30 PM</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-award"></i>
+          <span>Govt. Regd. & NIELIT Affiliated</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-map-pin"></i>
+          <span>Plus Code: PPMP+7W Chandigarh</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>© 2025 Balaji Computer Training Centre. All Rights Reserved. | Govt. Registered & NIELIT Affiliated.</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-2 mt-md-0">
+          <p>
+            <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;margin-right:1rem;">Privacy Policy</a>
+            <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;margin-right:1rem;">Terms of Use</a>
+            <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;">Sitemap</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== FLOATING ELEMENTS ==================== -->
+<a href="tel:07889248540" id="floatCall">
+  <i class="fa-solid fa-phone-volume"></i>
+  <span class="call-text">078892 48540</span>
+</a>
+
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- ==================== MODALS ==================== -->
+
+<!-- NIOS Counseling Modal -->
+<div class="modal fade" id="niosModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title"><i class="fa-solid fa-book-open me-2" style="color:var(--accent-gold);"></i>NIOS Admission Counseling Request</h5>
+          <p style="color:rgba(255,255,255,0.6);font-size:0.8rem;margin:0.3rem 0 0;">Fill in your details and our NIOS expert will reach out within 24 hours.</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="niosForm" onsubmit="submitNiosForm(event)">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-control" placeholder="Your full name" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Mobile Number *</label>
+              <input type="tel" class="form-control" placeholder="Your 10-digit mobile number" required />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Interested In</label>
+              <select class="form-select">
+                <option value="">Select a program</option>
+                <option>NIOS 10th Class (Secondary)</option>
+                <option>NIOS 12th Class (Senior Secondary)</option>
+                <option>NIOS TMA Preparation</option>
+                <option>NIOS Practical Exam Guidance</option>
+                <option>NIOS Fee Submission Support</option>
+                <option>General NIOS Counseling</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Preferred Contact Time</label>
+              <select class="form-select">
+                <option value="">Any time during 8AM-7:30PM</option>
+                <option>Morning (8:00 AM – 11:00 AM)</option>
+                <option>Afternoon (11:00 AM – 2:00 PM)</option>
+                <option>Evening (4:00 PM – 7:30 PM)</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Your Message / Specific Query (Optional)</label>
+              <textarea class="form-control" rows="3" placeholder="Tell us about your educational background or specific NIOS requirements..."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-gold-solid w-100 justify-content-center" style="border:none;">
+                <i class="fa-solid fa-paper-plane"></i>Submit Counseling Request
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Batch Timing Modal -->
+<div class="modal fade" id="batchModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title"><i class="fa-solid fa-calendar-days me-2" style="color:var(--accent-gold);"></i>Batch Timings</h5>
+          <p id="batchCourseName" style="color:rgba(255,255,255,0.6);font-size:0.8rem;margin:0.3rem 0 0;"></p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.83rem;color:var(--text-muted);margin-bottom:1.2rem;">Multiple daily batches available to fit your schedule. Walk in during centre hours to confirm your seat.</p>
+
+        <div class="timing-row">
+          <span class="shift"><i class="fa-solid fa-sun me-2" style="color:var(--accent-gold);"></i>Morning Batch</span>
+          <span class="time">8:00 AM – 10:00 AM</span>
+          <span class="avail">Seats Available</span>
+        </div>
+        <div class="timing-row">
+          <span class="shift"><i class="fa-solid fa-cloud-sun me-2" style="color:var(--accent-gold);"></i>Late Morning</span>
+          <span class="time">10:30 AM – 12:30 PM</span>
+          <span class="avail">Seats Available</span>
+        </div>
+        <div class="timing-row">
+          <span class="shift"><i class="fa-solid fa-sun me-2" style="color:#e67e22;"></i>Afternoon Batch</span>
+          <span class="time">1:00 PM – 3:00 PM</span>
+          <span class="avail">Seats Available</span>
+        </div>
+        <div class="timing-row">
+          <span class="shift"><i class="fa-solid fa-moon me-2" style="color:#8e44ad;"></i>Evening Batch</span>
+          <span class="time">5:00 PM – 7:00 PM</span>
+          <span class="avail">Seats Available</span>
+        </div>
+
+        <div style="background:rgba(243,156,18,0.08);border:1px solid rgba(243,156,18,0.25);border-radius:12px;padding:1rem;margin-top:1rem;font-size:0.82rem;color:var(--text-muted);">
+          <i class="fa-solid fa-circle-info" style="color:var(--accent-gold);margin-right:0.4rem;"></i>
+          Visit us at <strong>SCO No 39, Top Floor, Sector 41D, Chandigarh</strong> or call <a href="tel:07889248540" style="color:var(--accent-gold);font-weight:700;">078892 48540</a> to confirm your batch enrollment.
+        </div>
+
+        <a href="tel:07889248540" class="btn-gold-solid mt-3 w-100 justify-content-center" style="text-decoration:none;">
+          <i class="fa-solid fa-phone"></i>Call to Confirm Enrollment
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<!-- Three.js (MUST load before our script) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ============================================
+     THREE.JS 3D HERO CANVAS
+  ============================================ */
+  const canvas = document.getElementById('three-canvas');
+
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    antialias: true,
+    alpha: true
+  });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x000000, 0);
+
+  const scene = new THREE.Scene();
+
+  const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.set(0, 0, 22);
+
+  /* Lighting */
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+  scene.add(ambientLight);
+
+  const pointLight1 = new THREE.PointLight(0xf39c12, 2.5, 80);
+  pointLight1.position.set(15, 15, 15);
+  scene.add(pointLight1);
+
+  const pointLight2 = new THREE.PointLight(0x2c5364, 2, 80);
+  pointLight2.position.set(-15, -10, 10);
+  scene.add(pointLight2);
+
+  const pointLight3 = new THREE.PointLight(0xe67e22, 1.5, 60);
+  pointLight3.position.set(0, -20, 5);
+  scene.add(pointLight3);
+
+  /* ---- TORUS KNOT (central hero element) ---- */
+  const torusKnotGeo = new THREE.TorusKnotGeometry(5, 1.4, 220, 28, 2, 3);
+  const torusKnotMat = new THREE.MeshPhongMaterial({
+    color: 0x203a43,
+    emissive: 0x0f2027,
+    specular: 0xf39c12,
+    shininess: 90,
+    transparent: true,
+    opacity: 0.55,
+    wireframe: false
+  });
+  const torusKnot = new THREE.Mesh(torusKnotGeo, torusKnotMat);
+  torusKnot.position.set(6, 0, -5);
+  scene.add(torusKnot);
+
+  /* Wireframe overlay on torus knot */
+  const torusKnotWireMat = new THREE.MeshBasicMaterial({
+    color: 0xf39c12,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.08
+  });
+  const torusKnotWire = new THREE.Mesh(torusKnotGeo, torusKnotWireMat);
+  torusKnotWire.position.copy(torusKnot.position);
+  scene.add(torusKnotWire);
+
+  /* ---- OUTER TORUS RING ---- */
+  const torusGeo = new THREE.TorusGeometry(8.5, 0.25, 20, 100);
+  const torusMat = new THREE.MeshPhongMaterial({
+    color: 0xf39c12,
+    emissive: 0xe67e22,
+    transparent: true,
+    opacity: 0.3,
+    shininess: 120
+  });
+  const outerTorus = new THREE.Mesh(torusGeo, torusMat);
+  outerTorus.rotation.x = Math.PI / 2.8;
+  outerTorus.position.set(6, 0, -5);
+  scene.add(outerTorus);
+
+  /* ---- SECOND ORBIT RING ---- */
+  const ring2Geo = new THREE.TorusGeometry(10.5, 0.12, 16, 100);
+  const ring2Mat = new THREE.MeshBasicMaterial({
+    color: 0x5dade2,
+    transparent: true,
+    opacity: 0.18
+  });
+  const ring2 = new THREE.Mesh(ring2Geo, ring2Mat);
+  ring2.rotation.x = Math.PI / 4;
+  ring2.rotation.y = Math.PI / 6;
+  ring2.position.set(6, 0, -5);
+  scene.add(ring2);
+
+  /* ---- FLOATING PARTICLES ---- */
+  const particleCount = 280;
+  const particleGeo = new THREE.BufferGeometry();
+  const positions = new Float32Array(particleCount * 3);
+  const particleSizes = new Float32Array(particleCount);
+
+  for (let i = 0; i < particleCount; i++) {
+    const i3 = i * 3;
+    positions[i3]     = (Math.random() - 0.5) * 80;
+    positions[i3 + 1] = (Math.random() - 0.5) * 60;
+    positions[i3 + 2] = (Math.random() - 0.5) * 40 - 10;
+    particleSizes[i]  = Math.random() * 2.5 + 0.5;
+  }
+
+  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  particleGeo.setAttribute('size', new THREE.BufferAttribute(particleSizes, 1));
+
+  const particleMat = new THREE.PointsMaterial({
+    color: 0xf39c12,
+    size: 0.18,
+    transparent: true,
+    opacity: 0.45,
+    sizeAttenuation: true
+  });
+
+  const particles = new THREE.Points(particleGeo, particleMat);
+  scene.add(particles);
+
+  /* ---- SMALL ICOSAHEDRA (floating tech nodes) ---- */
+  const icoGroup = new THREE.Group();
+  const icoPositions = [
+    [-12, 5, -8], [14, -6, -12], [-8, -8, -6],
+    [16, 8, -10], [-14, -3, -14], [3, 12, -9],
+    [-5, -12, -8], [10, 3, -5]
+  ];
+
+  icoPositions.forEach((pos, idx) => {
+    const size = 0.35 + Math.random() * 0.55;
+    const geo = new THREE.IcosahedronGeometry(size, 0);
+    const mat = new THREE.MeshPhongMaterial({
+      color: idx % 2 === 0 ? 0xf39c12 : 0x5dade2,
+      emissive: idx % 2 === 0 ? 0xe67e22 : 0x2980b9,
+      transparent: true,
+      opacity: 0.55 + Math.random() * 0.25,
+      shininess: 80
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(...pos);
+    mesh.userData = {
+      floatSpeed: 0.3 + Math.random() * 0.7,
+      floatOffset: Math.random() * Math.PI * 2,
+      rotSpeed: (Math.random() - 0.5) * 0.025
+    };
+    icoGroup.add(mesh);
+  });
+  scene.add(icoGroup);
+
+  /* ---- Mouse tracking ---- */
+  let mouseX = 0, mouseY = 0;
+  let targetMouseX = 0, targetMouseY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    targetMouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+    targetMouseY = -(e.clientY / window.innerHeight - 0.5) * 2;
+  });
+
+  /* ---- Clock ---- */
+  const clock = new THREE.Clock();
+
+  /* ---- Animation Loop ---- */
+  function animate() {
+    requestAnimationFrame(animate);
+
+    const elapsed = clock.getElapsedTime();
+    const delta = clock.getDelta ? 0.016 : 0.016;
+
+    /* Smooth mouse follow */
+    mouseX += (targetMouseX - mouseX) * 0.04;
+    mouseY += (targetMouseY - mouseY) * 0.04;
+
+    /* Torus Knot rotation */
+    torusKnot.rotation.x = elapsed * 0.18 + mouseY * 0.25;
+    torusKnot.rotation.y = elapsed * 0.22 + mouseX * 0.25;
+    torusKnotWire.rotation.copy(torusKnot.rotation);
+
+    /* Outer ring orbit */
+    outerTorus.rotation.z = elapsed * 0.12;
+    outerTorus.rotation.x = Math.PI / 2.8 + mouseY * 0.12;
+    outerTorus.rotation.y = mouseX * 0.12;
+
+    ring2.rotation.z = -elapsed * 0.08;
+    ring2.rotation.x = Math.PI / 4 + mouseY * 0.1;
+
+    /* Particle gentle drift */
+    particles.rotation.y = elapsed * 0.015;
+    particles.rotation.x = elapsed * 0.008;
+
+    /* Floating icosahedra */
+    icoGroup.children.forEach((mesh, i) => {
+      const ud = mesh.userData;
+      mesh.position.y += Math.sin(elapsed * ud.floatSpeed + ud.floatOffset) * 0.008;
+      mesh.rotation.x += ud.rotSpeed;
+      mesh.rotation.y += ud.rotSpeed * 0.7;
+    });
+
+    /* Camera subtle drift on mouse */
+    camera.position.x += (mouseX * 2 - camera.position.x) * 0.02;
+    camera.position.y += (mouseY * 1.5 - camera.position.y) * 0.02;
+    camera.lookAt(scene.position);
+
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  /* ---- Resize Handler ---- */
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  });
+
+
+  /* ============================================
+     NAVBAR SCROLL EFFECT
+  ============================================ */
+  const mainNav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      mainNav.classList.add('scrolled');
+    } else {
+      mainNav.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+
+  /* ============================================
+     SCROLL TO TOP BUTTON
+  ============================================ */
+  const scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+
+  /* ============================================
+     SMOOTH SCROLL FOR ANCHOR LINKS
+  ============================================ */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+
+        /* Close mobile navbar if open */
+        const navMenu = document.getElementById('navMenu');
+        if (navMenu.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navMenu);
+          if (bsCollapse) bsCollapse.hide();
+        }
+      }
+    });
+  });
+
+
+  /* ============================================
+     COURSE FILTER TABS
+  ============================================ */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const courseItems = document.querySelectorAll('.course-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      /* Update active state */
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      const filter = this.getAttribute('data-filter');
+
+      courseItems.forEach(item => {
+        const cat = item.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          item.classList.remove('hidden');
+          /* Re-trigger fade animation */
+          item.classList.remove('visible');
+          void item.offsetWidth; /* reflow */
+          setTimeout(() => item.classList.add('visible'), 50);
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+
+  /* ============================================
+     BATCH TIMING MODAL
+  ============================================ */
+  window.openBatchModal = function(courseName) {
+    document.getElementById('batchCourseName').textContent = courseName;
+    const modal = new bootstrap.Modal(document.getElementById('batchModal'));
+    modal.show();
+  };
+
+
+  /* ============================================
+     NIOS FORM SUBMIT
+  ============================================ */
+  window.submitNiosForm = function(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      const modal = bootstrap.Modal.getInstance(document.getElementById('niosModal'));
+      modal.hide();
+      e.target.reset();
+      btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i>Submit Counseling Request';
+      btn.disabled = false;
+
+      /* Success Toast */
+      const toastEl = document.createElement('div');
+      toastEl.style.cssText = `
+        position:fixed;top:2rem;right:2rem;z-index:99999;
+        background:linear-gradient(135deg,#27ae60,#2ecc71);
+        color:#fff;padding:1rem 1.5rem;border-radius:14px;
+        font-family:Poppins,sans-serif;font-size:0.85rem;font-weight:600;
+        box-shadow:0 10px 30px rgba(39,174,96,0.4);
+        display:flex;align-items:center;gap:0.6rem;
+        animation:toastIn 0.4s ease;
+      `;
+      toastEl.innerHTML = '<i class="fa-solid fa-circle-check"></i> Request submitted! We\'ll call you within 24 hours.';
+      document.body.appendChild(toastEl);
+
+      const style = document.createElement('style');
+      style.textContent = '@keyframes toastIn{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:translateX(0)}}';
+      document.head.appendChild(style);
+
+      setTimeout(() => {
+        toastEl.style.transition = 'all 0.4s ease';
+        toastEl.style.opacity = '0';
+        toastEl.style.transform = 'translateX(50px)';
+        setTimeout(() => { toastEl.remove(); style.remove(); }, 400);
+      }, 4000);
+    }, 1600);
+  };
+
+
+  /* ============================================
+     INTERSECTION OBSERVER — FADE UP ANIMATIONS
+  ============================================ */
+  const fadeEls = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        /* Staggered delay based on element index within its parent */
+        const siblings = Array.from(entry.target.parentElement.children);
+        const idx = siblings.indexOf(entry.target);
+        const delay = Math.min(idx * 90, 350);
+
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  fadeEls.forEach(el => observer.observe(el));
+
+})();
+</script>
+
+</body>
+</html>
